@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neelu Online Cake Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #search-bar {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #search-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        #cake-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cake-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cake-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .cake-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cake-name {
+            font-weight: bold;
+        }
+
+        .cake-price {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #2980b9;
+        }
+
+        #cart-total {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Neelu Online Cake Delivery</div>
+
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search cakes...">
+        <button id="search-button" onclick="searchCakes()">Search</button>
+    </div>
+
+  <ul id="cake-list">
+        <li class="cake-item">
+            <img src="chocolatecake.jpg" alt="Cake 1">
+            <div class="cake-details">
+                <span class="cake-name">Chocolate Cake</span>
+                <span class="cake-price">$16.99</span>
+                 <button class="add-to-cart-button" onclick="addToCart(16.99)">Add to Cart</button>
+            </div>
+        </li>
+        <li class="cake-item">
+            <img src="strawberrycake.jpg" alt="Cake 2">
+            <div class "cake-details">
+                <span class="cake-name">Strawberry Cheesecake</span>
+                <span class="cake-price">$18.99</span>
+               <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+        <li class="cake-item">
+            <img src="redvelvetcake.jpg" alt="Cake 3">
+            <div class="cake-details">
+                <span class="cake-name">Red Velvet Cake</span>
+                <span class="cake-price">$20.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+        <li class="cake-item">
+            <img src="lemoncake.jpg" alt="Cake 4">
+            <div class="cake-details">
+                <span class="cake-name">Lemon Pound Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+
+   
+      
+        <li class="cake-item">
+            <img src="pineapplecake.jpg" alt="Cake 5">
+            <div class="cake-details">
+                <span class="cake-name">Pineapple Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+        </li>
+        <li class="cake-item">
+            <img src="butterscotchcake.jpg" alt="Cake 6">
+            <div class="cake-details">
+                <span class="cake-name">Butterscotch Cake</span>
+                <span class="cake-price">$16.99</span>
+               <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="rainbowcake.jpg" alt="Cake 7">
+            <div class="cake-details">
+                <span class="cake-name">Rainbow Cake</span>
+                <span class="cake-price">$16.99</span>
+               <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="bananacake.jpg" alt="Cake 8">
+            <div class="cake-details">
+                <span class="cake-name">Banana Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="fruitcake.jpg" alt="Cake 9">
+            <div class="cake-details">
+                <span class="cake-name">Fruit Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="icecreamcake.jpg" alt="Cake 10">
+            <div class="cake-details">
+                <span class="cake-name">Ice cream Cake</span>
+                <span class="cake-price">$16.99</span>
+               <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="rasamalaicake.jpg" alt="Cake 11">
+            <div class="cake-details">
+                <span class="cake-name">Rasamalai Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="cheesecake.jpg" alt="Cake 12">
+            <div class="cake-details">
+                <span class="cake-name">Cheese Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="kitkatcake.jpg" alt="Cake 13">
+            <div class="cake-details">
+                <span class="cake-name">Kit Kat Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="blueberrycake.jpg" alt="Cake 14">
+            <div class="cake-details">
+                <span class="cake-name">Blueberry Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="mangocake.jpg" alt="Cake 15">
+            <div class="cake-details">
+                <span class="cake-name">Mango Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="blackforestcake.jpg" alt="Cake 16">
+            <div class="cake-details">
+                <span class="cake-name">Black Forest Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+        <li class="cake-item">
+            <img src="caramelcake.jpg" alt="Cake 17">
+            <div class="cake-details">
+                <span class="cake-name">Caramel Cake</span>
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+</li>
+       
+    </ul>
+        <li class="cake-item">
+            <img src="namecake.jpg" alt="Custom Cake">
+            <div class="cake-details">
+                <input type="text" id="custom-cake-name" placeholder="Custom Cake Name">
+                <span class="cake-price">$16.99</span>
+                <button class="add-to-cart-button" onclick="addToCart(15.99)">Add to Cart</button>
+            </div>
+        </li>
+    </ul>
+
+
+    <div id="cart-total" onclick="navigateToCartPage()">
+        Total Cart Price: $<span id="total-price">0.00</span>
+    </div>
+
+    <script>
+        var totalPrice = 0.00;
+
+        function searchCakes() {
+            var input = document.getElementById("search-input").value.toLowerCase();
+            var cakeList = document.getElementById("cake-list");
+            var cakes = cakeList.getElementsByTagName("li");
+
+            for (var i = 0; i < cakes.length; i++) {
+                var cakeName = cakes[i].textContent.toLowerCase();
+                if (cakeName.includes(input)) {
+                    cakes[i].style.display = "block";
+                } else {
+                    cakes[i].style.display = "none";
+                }
+            }
+        }
+
+        function addToCart(price) {
+            totalPrice += price;
+            updateTotalPrice();
+        }
+
+        function addCustomCakeToCart() {
+            var customCakePrice = parseFloat(document.getElementById("custom-cake-price").value);
+            if (!isNaN(customCakePrice)) {
+                addToCart(customCakePrice);
+            }
+        }
+
+        function updateTotalPrice() {
+            document.getElementById("total-price").textContent = totalPrice.toFixed(2);
+        }
+
+        function navigateToCartPage() {
+            // Replace the URL with the actual cart page
+            window.location.href = "totalprice.html";
+        }
+    </script>
+</body>
+</html>
