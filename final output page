@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('picture.jpg'); /* Add the URL of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            margin: 50px 0;
+        }
+        img {
+             width: 200px;
+            height: 200px;
+           
+            margin: 0 auto;
+        }
+        #trackOrderButton {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #trackOrderButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Order Has Been Placed. Out for Delivery</h1>
+    <button id="trackOrderButton" onclick="trackOrder()">Track Order</button>
+    
+    
+    <h2>Thank You for Visiting</h2>
+    <img src="thanks.jpg " alt="Thank You Image">
+
+    <script>
+        function trackOrder() {
+            window.open("https://www.google.com/maps", "_blank");
+        }
+    </script>
+</body>
+</html>
