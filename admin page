@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-image: url('backgroundafterlogin.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #header {
+            background-color: grey;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        #buttons {
+            margin: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            background-color: pink;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Admin</div>
+    <div id="buttons">
+        <a href="manage_products.html" class="button">Manage Products</a>
+        <a href="post_cake_details.html" class="button">Post Cake Details</a>
+        <a href="upload_images.html" class="button">Upload Images</a>
+        <a href="product_description.html" class="button">Product Description</a>
+        <a href="manage_orders.html" class="button">Manage Orders</a>
+        <a href="update_order_status.html" class="button">Update Order Status</a>
+        <a href="shipping_location.html" class="button">Shipping Location</a>
+        <a href="logout.html" class="button">Log Out</a>
+    </div>
+</body>
+</html>
