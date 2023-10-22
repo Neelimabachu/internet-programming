@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+     
+        body {
+            background-image: url('adminbackground.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        #login-form {
+            margin: 20px;
+        }
+
+        .input-box {
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #login-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #login-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Admin</div>
+    <div id="login-form">
+        <form action="afteradminlogin.html" method="post">
+            <input type="text" class="input-box" name="username" placeholder="Username" required><br>
+            <input type="password" class="input-box" name="password" placeholder="Password" required><br>
+            <input type="submit" id="login-button" value="Login">
+        </form>
+    </div>
+</body>
+</html>
