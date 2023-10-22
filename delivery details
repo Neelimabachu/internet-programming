@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('addressbackground.jpg'); /* Add the URL of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main-heading {
+            font-size: 24px;
+            margin: 0;
+            padding: 100px 0 20px;
+        }
+
+        .input-box {
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #delivery-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        #delivery-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Payment Details</h1>
+
+    <input type="text" class="input-box" placeholder="Name">
+    <br>
+    <input type="email" class="input-box" placeholder="Email Address">
+    <br>
+    <input type="tel" class="input-box" placeholder="Contact Number">
+    <br>
+    <input type="text" class="input-box" placeholder="Door No. and Street Name">
+    <br>
+    <input type="text" class="input-box" placeholder="Address">
+    <br>
+    <input type="text" class="input-box" placeholder="Pincode">
+    <br>
+
+    <button id="delivery-button" onclick="deliverToAddress()">Delivery to This Address</button>
+
+    <script>
+        function deliverToAddress() {
+            // Navigate to another page (replace with the actual URL)
+            window.location.href = "order.html";
+        }
+    </script>
+</body>
+</html>
