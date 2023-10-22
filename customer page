@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Information</title>
+    <style>
+        body {
+            background-image: url('adminbackground.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        #customer-form {
+            margin: 20px;
+        }
+
+        .input-box {
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #submit-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Customer</div>
+    <div id="customer-form">
+        <form action="cakelist.html" method="post">
+            <input type="text" class="input-box" name="name" placeholder="Customer Name" required><br>
+            <input type="text" class="input-box" name="contact" placeholder="Contact Number" required><br>
+            <input type="email" class="input-box" name="email" placeholder="Email Address" required><br>
+            <input type="text" class="input-box" name="location" placeholder="Location" required><br>
+            <input type="text" class="input-box" name="pincode" placeholder="Pincode" required><br>
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
