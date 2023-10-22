@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Process</title>
+    <style>
+        body {
+            background-image: url('backgroundprice.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #main-heading {
+            margin: 100px 0;
+            font-size: 24px;
+        }
+
+        #total-cart-price {
+            font-size: 18px;
+        }
+
+        #pay-now-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        #pay-now-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Payment Process</h1>
+
+    <p id="total-cart-price">
+        Total Cart Price: $<span id="cart-price">51.68</span>
+    </p>
+
+    <button id="pay-now-button" onclick="payNow()">Pay Now</button>
+
+
+    <script>
+        // Retrieve the total cart price from another web page (you can replace this with the actual value)
+        var cart-price = "totalprice.html";  // Replace with the actual total cart price
+        // Display the total cart price on this page
+        document.getElementById("cart-price").textContent = cartPrice.toFixed(2);
+
+        function payNow() {
+            // Navigate to the payment processing page (replace with the actual URL)
+            window.location.href = "address.html";
+        }
+    </script>
+</body>
+</html>
