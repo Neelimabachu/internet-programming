@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>online_cake_ordering</title>
+    <style>
+        body {
+            background-image: url('backgroundcake1.jpg'); /* Add the URL of your background image here */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #main-heading {
+            font-size: 28px;
+            color: cyan;
+            margin-bottom: 20px;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1 id="main-heading">Welcome to Neelu Cake Ordering System</h1>
+        <div id="buttons">
+            <a href="adminlogin.html" class="button">Admin</a>
+            <a href="neelima.php" class="button">Customer</a>
+        </div>
+    </div>
+</body>
+</html>
