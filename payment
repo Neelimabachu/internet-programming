@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Process</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Add the URL of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 18px;
+            text-align: left;
+            margin-left: 20px;
+        }
+        ul {
+            list-style-type: none;
+            text-align: left;
+            padding: 0;
+        }
+        li {
+            text-align: left;
+            margin: 10px 0;
+            margin-left: 20px;
+        }
+        .input-box {
+            display: none;
+            margin: 5px;
+        }
+        .upi-icons {
+            display: none;
+        }
+        .upi-icons img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        #makePaymentButton {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 20px 0;
+            margin-left: 20px;
+        }
+        #makePaymentButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment Process</h1>
+
+    <h2>Select a Payment Method:</h2>
+    <ul>
+        <li>
+            <input type="radio" name="paymentMethod" value="creditCard"> Credit Card
+            <div id="creditCardInputs">
+                Name: <input type="text" class="input-box"><br>
+                Card Number: <input type="text" class="input-box"><br>
+                Expiry Date: <input type="text" class="input-box"><br>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="paymentMethod" value="debitCard"> Debit Card
+            <div id="debitCardInputs">
+                Name: <input type="text" class="input-box"><br>
+                Card Number: <input type="text" class="input-box"><br>
+                Expiry Date: <input type="text" class="input-box"><br>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="paymentMethod" value="upi"> UPI
+            <div class="upi-icons">
+                <a href="https://www.phonepe.com" target="_blank"><img src="phonepe-icon.png" alt="PhonePe"></a>
+                <a href="https://pay.google.com" target="_blank"><img src="gpay-icon.png" alt="GPay"></a>
+                <a href="https://paytm.com/upi" target="_blank"><img src="paytm-icon.png" alt="Paytm"></a>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="paymentMethod" value="cashOnDelivery"> Cash on Delivery
+        </li>
+    </ul>
+
+    <button id="makePaymentButton" onclick="makePayment()">Make Payment</button>
+
+    <script>
+        function makePayment() {
+            // Simulate a payment process (replace with actual payment processing logic)
+            // After successful payment, navigate to another page
+            window.location.href = "lastpage.html"; // Replace with the actual URL
+        }
+    </script>
+</body>
+</html>
